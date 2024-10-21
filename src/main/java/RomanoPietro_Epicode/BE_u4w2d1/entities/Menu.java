@@ -18,21 +18,49 @@ public class Menu {
     public String toString() {
         StringBuilder sb = new StringBuilder();
 
+
         sb.append("Menu:\n");
 
-        sb.append("Pizzas:\n");
+
+        sb.append(String.format("%-20s %-20s %-10s\n", "Pizzas", "Calories", "Price"));
+
+
         for (Pizza pizza : pizzas) {
-            sb.append("- ").append(pizza).append("\n");
+            sb.append(String.format("%-20s %-20s %-10s\n",
+                    pizza.getName(),
+                    pizza.getCalories(),
+                    pizza.getPrice()
+            ));
         }
 
-        sb.append("Toppings:\n");
+        sb.append("\n");
+
+
+        sb.append(String.format("%-20s %-20s %-10s\n", "Toppings", "Calories", "Price"));
+
+
         for (Toppings topping : toppings) {
-            sb.append("- ").append(topping).append("\n");
+            sb.append(String.format("%-20s %-20s %-10s\n",
+                    topping.getName(),
+                    topping.getCalories(),
+                    topping.getPrice()
+            ));
         }
 
-        sb.append("Drinks:\n");
+        sb.append("\n");
+
+        sb.append(String.format("%-20s %-20s %-10s\n", "Drinks", "Calories", "Price"));
         for (Drinks drink : drinks) {
-            sb.append("- ").append(drink).append("\n");
+            String alcoholPercentage = String.format("%.1f%%", drink.getAlcoholPercentage());
+            if (drink.getAlcoholPercentage() == 0) {
+                alcoholPercentage = "0%";
+            }
+
+            sb.append(String.format("%-20s %-20s %-10s\n",
+                    drink.getName() + String.format(" (%.2fL, %s)", drink.getVolume(), alcoholPercentage), // Nome con volume e percentuale di alcool
+                    drink.getCalories(),
+                    drink.getPrice()
+            ));
         }
 
         return sb.toString();

@@ -1,6 +1,5 @@
 package RomanoPietro_Epicode.BE_u4w2d1;
 
-
 import RomanoPietro_Epicode.BE_u4w2d1.entities.Menu;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

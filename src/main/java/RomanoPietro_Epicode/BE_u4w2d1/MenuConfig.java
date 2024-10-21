@@ -6,7 +6,6 @@ import RomanoPietro_Epicode.BE_u4w2d1.entities.Pizza;
 import RomanoPietro_Epicode.BE_u4w2d1.entities.Toppings;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Scope;
 
 import java.util.Arrays;
 
@@ -60,14 +59,17 @@ public class MenuConfig {
     public Drinks cocaCola(){
         return new Drinks("cocaCola",2.50, 150, 0.33, 0);
     }
+
     @Bean
     public Drinks water(){
         return new Drinks("Water",1.00, 0, 0.33, 0);
     }
+
     @Bean
     public Drinks lemonade(){
         return new Drinks("Lemonade",1.00, 128, 0.33, 0);
     }
+
     @Bean
     public Drinks beer(){
         return new Drinks("Beer",5.00, 43, 0.66, 4.5);

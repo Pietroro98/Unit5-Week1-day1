@@ -1,5 +1,4 @@
 package RomanoPietro_Epicode.BE_u4w2d1.entities;
-
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;

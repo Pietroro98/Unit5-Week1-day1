@@ -1,7 +1,5 @@
 package RomanoPietro_Epicode.BE_u4w2d1.entities;
-
 import lombok.*;
-
 import java.util.List;
 
 
