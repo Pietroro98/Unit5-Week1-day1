@@ -11,4 +11,5 @@ public abstract class FoodItem {
     protected String name;
     protected double price;
     protected int calories;
+
 }
